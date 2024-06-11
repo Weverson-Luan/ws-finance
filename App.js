@@ -10,6 +10,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>OLA JENNIFER!!!</Text>
+
+
+
+
+      <View style={styles.container2}>
+      <Text>sou a caixa</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -25,4 +32,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  container2: {
+    width: 100,
+    height: 200,
+    backgroundColor: 'red'
+  }
 });
