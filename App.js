@@ -2,24 +2,35 @@
  * IMPORTS
  */
 
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, Button, StyleSheet } from "react-native";
 
-import { StatusBar } from 'expo-status-bar';
 
-export default function App() {
+const Teste1 = () => {
   return (
-    <View style={styles.container}>
-      <Text>OLA JENNIFER!!!</Text>
-
-
-
-
-      <View style={styles.container2}>
-      <Text>sou a caixa</Text>
+    <View style={styles.test1}>
+        <Text style={styles.textTitle}>Logooo</Text>
+        
+      <View>
       </View>
-      <StatusBar style="auto" />
     </View>
   );
+};
+
+const Teste2 = () => {
+  return (
+    <View style={styles.test2}>
+      <View>
+        <Text style={styles.textTitle2}>Logooo2</Text>
+
+        <Button title="Click" />
+      </View>
+    </View>
+  );
+};
+
+
+export default function App() {
+  return <>{false ? <Teste1 /> : <Teste2 />}</>;
 }
 
 /**
@@ -28,13 +39,33 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121214',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#121214",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  container2: {
-    width: 100,
-    height: 200,
-    backgroundColor: 'red'
+  test1: {
+    width: "100%", // largura da tela
+    backgroundColor: "red", // cor de fundo
+    flex: 1, // largura disponivél em tela
+    alignItems: "center",
+    justifyContent: "center",
+    
+  },
+  textTitle: {
+    fontSize: 18,
+    color: "#fff",
+   
+  },
+  test2: {
+    width: "100%",
+    flex: 1,
+    backgroundColor: "red",
+    alignItems: 'center',
+    justifyContent: "center",
+  },
+  textTitle2: {
+    fontWeight: '700',
+    fontSize: 24,
+    color: "#fff",
   }
 });
